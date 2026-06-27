@@ -20,7 +20,7 @@ export function ProductGallery({ images, name }: { images: GalleryImage[]; name:
     <div className="flex flex-col-reverse gap-3 lg:flex-row">
       {/* Thumbnails */}
       {list.length > 1 && (
-        <div className="flex gap-3 lg:flex-col">
+        <div className="no-scrollbar flex gap-3 overflow-x-auto pb-1 lg:flex-col lg:overflow-visible lg:pb-0">
           {list.map((img, i) => (
             <button
               key={i}

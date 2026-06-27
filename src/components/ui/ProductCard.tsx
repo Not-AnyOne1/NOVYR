@@ -100,8 +100,7 @@ export function ProductCard({
         {!soldOut && (
           <div
             className={cn(
-              'absolute inset-x-2.5 bottom-2.5 z-10 translate-y-3 rounded-lg border border-white/10 bg-ink-900/85 p-2 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100',
-              'max-md:static max-md:mt-3 max-md:translate-y-0 max-md:bg-transparent max-md:p-0 max-md:opacity-100 max-md:backdrop-blur-none'
+              'absolute inset-x-2.5 bottom-2.5 z-10 hidden translate-y-3 rounded-lg border border-white/10 bg-ink-900/85 p-2 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 md:block'
             )}
           >
             <p className="mb-1.5 px-0.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-smoke max-md:hidden">

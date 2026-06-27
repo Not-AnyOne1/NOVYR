@@ -20,6 +20,15 @@
     @apply bg-ink text-smoke-light antialiased;
     font-feature-settings: 'ss01', 'cv01';
     text-rendering: optimizeLegibility;
+    /* Guard against any stray horizontal scroll on mobile (clip preserves sticky) */
+    overflow-x: clip;
+  }
+
+  /* Media never forces the viewport wider than the screen */
+  img,
+  video,
+  svg {
+    max-width: 100%;
   }
 
   /* Custom selection */

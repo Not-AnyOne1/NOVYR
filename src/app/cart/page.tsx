@@ -98,7 +98,7 @@ export default function CartPage() {
                     </div>
                     <span className="whitespace-nowrap text-sm font-semibold text-white">{formatMAD(item.unitCents * item.quantity)}</span>
                   </div>
-                  <div className="mt-auto flex items-center justify-between pt-3">
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-3">
                     <QuantityStepper value={item.quantity} max={item.maxStock} onChange={(q) => updateQty(item.key, q)} />
                     <div className="flex items-center gap-1">
                       <button onClick={() => saveForLater(item.key)} className="flex items-center gap-1 px-2 text-xs text-smoke hover:text-white">

@@ -50,7 +50,7 @@ export default async function LookbookPage() {
       {/* Gallery */}
       {rest.length > 0 && (
         <section className="mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:py-28">
-          <div className="grid auto-rows-[280px] grid-cols-2 gap-3 sm:auto-rows-[360px] sm:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-flow-row-dense auto-rows-[280px] grid-cols-2 gap-3 sm:auto-rows-[360px] sm:grid-cols-3 lg:grid-flow-row lg:grid-cols-4">
             {rest.map((img, i) => (
               <div key={img.id} className={`group relative overflow-hidden rounded-2xl bg-ink-800 ${spanClass(img.span)}`}>
                 <Image

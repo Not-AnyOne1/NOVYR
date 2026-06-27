@@ -57,7 +57,7 @@ export function Header() {
     >
       <div
         className={cn(
-          'mx-auto grid max-w-[1500px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 transition-[height] duration-500 ease-out-expo sm:px-8',
+          'mx-auto grid max-w-[1500px] grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 transition-[height] duration-500 ease-out-expo sm:gap-4 sm:px-8',
           scrolled ? 'h-16' : 'h-16 lg:h-[5.5rem]'
         )}
       >
@@ -67,7 +67,7 @@ export function Header() {
             type="button"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
-            className="-ml-2 grid h-11 w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5 lg:hidden"
+            className="-ml-2 grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5 lg:hidden"
           >
             <Menu size={22} strokeWidth={1.5} />
           </button>
@@ -131,21 +131,21 @@ export function Header() {
             type="button"
             onClick={() => setSearchOpen((v) => !v)}
             aria-label="Search"
-            className="grid h-11 w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5"
+            className="grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5"
           >
             <Search size={19} strokeWidth={1.6} />
           </button>
           <Link
             href={status === 'authenticated' ? '/account/wishlist' : '/login'}
             aria-label="Wishlist"
-            className="hidden h-11 w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5 sm:grid"
+            className="hidden h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5 sm:grid"
           >
             <Heart size={19} strokeWidth={1.6} />
           </Link>
           <Link
             href={status === 'authenticated' ? '/account' : '/login'}
             aria-label="Account"
-            className="grid h-11 w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5"
+            className="grid h-10 w-10 sm:h-11 sm:w-11 place-items-center rounded-full text-white transition-colors hover:bg-white/5"
           >
             <User size={19} strokeWidth={1.6} />
           </Link>
