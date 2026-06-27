@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-charcoal-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ink text-smoke-light antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom selection */
+  ::selection {
+    @apply bg-white/20 text-white;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ink-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-500 rounded-full;
+    border: 2px solid #0a0a0c;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-charcoal-light;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  /* Primary CTA — bone/white, lifts on hover (monochrome luxury) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-bone px-8 py-4
+           text-[12px] font-semibold uppercase tracking-[0.2em] text-ink transition-all duration-300
+           ease-out-expo hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_16px_40px_-16px_rgba(0,0,0,0.8)]
+           active:translate-y-0 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  /* Secondary — hairline outline */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/25
+           bg-transparent px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-white
+           backdrop-blur transition-all duration-300 ease-out-expo hover:-translate-y-0.5
+           hover:border-white hover:bg-white/[0.04] active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm
+           font-medium text-smoke transition-colors hover:text-white;
+  }
+
+  /* Section eyebrow label — graphic micro-label with a hairline anchor */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.34em] text-bone-dark;
+  }
+  .eyebrow::before {
+    @apply h-px w-7 bg-white/25;
+    content: '';
+  }
+  .eyebrow-center::before {
+    @apply hidden;
+  }
+
+  /* Premium nav link with animated underline */
+  .nav-link {
+    @apply relative whitespace-nowrap text-[12px] font-medium uppercase tracking-[0.18em]
+           text-smoke-light transition-colors duration-300 hover:text-white;
+  }
+  .nav-link::after {
+    @apply absolute -bottom-2 left-0 h-px w-full origin-left scale-x-0 bg-white
+           transition-transform duration-300 ease-out-expo;
+    content: '';
+  }
+  .nav-link:hover::after,
+  .nav-link[data-active='true']::after {
+    @apply scale-x-100;
+  }
+
+  .card {
+    @apply rounded-2xl border border-charcoal-border bg-ink-800/60 backdrop-blur;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-charcoal-border bg-ink-800 px-4 py-3 text-sm text-white
+           placeholder:text-smoke-dark focus:border-electric focus:outline-none focus:ring-1
+           focus:ring-electric transition-colors;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-smoke;
+  }
+
+  /* Shimmer skeleton */
+  .skeleton {
+    @apply relative overflow-hidden bg-ink-700;
+  }
+  .skeleton::after {
+    @apply absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r
+           from-transparent via-white/[0.06] to-transparent;
+    content: '';
+  }
+}
+
+@layer utilities {
+  /* Consistent luxury vertical rhythm */
+  .section {
+    @apply py-20 sm:py-24 lg:py-32;
+  }
+  .section-tight {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  /* Hairline divider with a soft fade */
+  .hairline {
+    @apply h-px w-full border-0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.12), transparent);
+  }
+
+  /* Cinematic noir grade — unifies all campaign photography */
+  .noir {
+    filter: grayscale(1) contrast(1.12) brightness(0.92);
+    transition: filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .group:hover .noir-hover {
+    filter: grayscale(0) contrast(1.02) brightness(1);
+  }
+
+  /* Outline / graffiti display text */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.35);
+  }
+  .text-outline-accent {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(46, 107, 255, 0.8);
+  }
+
+  /* Subtle film grain overlay for cinematic depth */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .container-tight {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
