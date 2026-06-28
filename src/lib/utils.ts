@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { SITE } from '@/lib/constants';
 
 /** Merge Tailwind classes with conflict resolution. */
 export function cn(...inputs: ClassValue[]) {
@@ -81,6 +82,5 @@ export function average(nums: number[]): number {
 }
 
 export function absoluteUrl(path = ''): string {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-  return `${base.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`;
+  return `${SITE.url}${path.startsWith('/') ? path : `/${path}`}`;
 }
