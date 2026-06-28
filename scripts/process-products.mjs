@@ -36,9 +36,9 @@ const ITEMS = [
   { key: 'desire', file: '1053631275319067387.jfif', gravity: 'centre', zoom: 0.96, printTop: 0.48, detailTop: 0.16 },
   { key: 'spider', file: '🐇.webp', gravity: 'centre', zoom: 1, printTop: 0.52, detailTop: 0.12 },
   // ── drop 003 ──
-  { key: 'moneylove', file: 'ChatGPT Image 27 juin 2026, 19_26_57.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.1 },
-  { key: 'getlost', file: 'ChatGPT Image 27 juin 2026, 19_23_49.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.1 },
-  { key: 'goat', file: 'ChatGPT Image 27 juin 2026, 19_21_37.png', gravity: 'centre', zoom: 1, printTop: 0.48, detailTop: 0.1 },
+  { key: 'moneylove', file: 'ChatGPT Image 28 juin 2026, 02_41_25.png', gravity: 'north', zoom: 1, printTop: 0.42, detailTop: 0.22 },
+  { key: 'getlost', file: 'ChatGPT Image 28 juin 2026, 02_47_11.png', gravity: 'north', zoom: 1, printTop: 0.42, detailTop: 0.22 },
+  { key: 'goat', file: 'ChatGPT Image 28 juin 2026, 02_38_44.png', gravity: 'north', zoom: 1, printTop: 0.45, detailTop: 0.22 },
   { key: 'suffer', file: 'ChatGPT Image 27 juin 2026, 00_45_13.png', gravity: 'centre', zoom: 1, printTop: 0.45, detailTop: 0.1 },
   { key: 'disorders', file: 'ChatGPT Image 27 juin 2026, 00_27_15.png', gravity: 'centre', zoom: 0.98, printTop: 0.5, detailTop: 0.12 },
   { key: 'wrong', file: 'ChatGPT Image 27 juin 2026, 00_25_49.png', gravity: 'centre', zoom: 1, printTop: 0.48, detailTop: 0.1 },
