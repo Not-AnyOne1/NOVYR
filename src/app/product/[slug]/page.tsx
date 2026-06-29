@@ -29,8 +29,14 @@ export async function generateMetadata({
   const product = await getProductBySlug(slug).catch(() => null);
   if (!product) return { title: 'Product not found' };
 
-  const title = product.metaTitle ?? product.name;
+  // Strip any brand suffix so the layout template adds "| NOVYR" exactly once.
+  const title = (product.metaTitle ?? product.name).replace(/\s*\|\s*NOVYR\s*$/i, '');
   const description = product.metaDescription ?? product.description.slice(0, 160);
+
+  // Link previews must show the full front design — never a crop/label.
+  const isFront = (url: string) => !(url.split('/').pop()?.split('.')[0] ?? '').includes('-');
+  const front = product.images.find((i) => isFront(i.url)) ?? product.images[0];
+  const ogImage = front?.url;
 
   return {
     title,
@@ -40,13 +46,13 @@ export async function generateMetadata({
       type: 'website',
       title: `${product.name} | ${SITE.name}`,
       description,
-      images: product.images.map((i) => ({ url: i.url, alt: i.alt ?? product.name })),
+      images: ogImage ? [{ url: ogImage, alt: product.name }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title: product.name,
       description,
-      images: product.images[0]?.url ? [product.images[0].url] : undefined,
+      images: ogImage ? [ogImage] : undefined,
     },
   };
 }

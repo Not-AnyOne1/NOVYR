@@ -3,6 +3,7 @@ import {
   getNewArrivals,
   getLimitedDrops,
   getTopReviews,
+  getReviewStats,
   getProductBySlug,
 } from '@/lib/queries';
 import { WebsiteJsonLd } from '@/components/seo/JsonLd';
@@ -27,11 +28,12 @@ async function safe<T>(p: Promise<T>, fallback: T): Promise<T> {
 }
 
 export default async function HomePage() {
-  const [bestSellers, newArrivals, limited, reviews] = await Promise.all([
+  const [bestSellers, newArrivals, limited, reviews, reviewStats] = await Promise.all([
     safe(getBestSellers(8), []),
     safe(getNewArrivals(8), []),
     safe(getLimitedDrops(4), []),
     safe(getTopReviews(6), []),
+    safe(getReviewStats(), { count: 0, average: 0 }),
   ]);
 
   // Hero = the headline drop, with its full set of images (front / back / detail)
@@ -73,7 +75,7 @@ export default async function HomePage() {
       />
       <WhyNovyr />
       <LimitedDrop products={limited} />
-      <CustomerReviews reviews={reviews} />
+      <CustomerReviews reviews={reviews} stats={reviewStats} />
       <InstagramCommunity />
       <NewsletterSection />
     </>

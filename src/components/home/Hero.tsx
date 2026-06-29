@@ -44,9 +44,8 @@ export function Hero({ product }: { product: HeroProduct | null }) {
             </p>
 
             <h1 className="mt-6 font-poster text-[clamp(2.75rem,6vw,5rem)] uppercase leading-[0.86] text-white">
-              Art On
-              <br />
-              <span className="text-outline">Heavy</span> Cotton.
+              <span className="block">Art On</span>
+              <span className="block"><span className="text-outline">Heavy</span> Cotton.</span>
             </h1>
 
             <p className="mt-7 max-w-sm text-[15px] leading-relaxed text-smoke-light">

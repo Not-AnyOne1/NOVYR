@@ -308,12 +308,38 @@ const COLLECTIONS = [
   { name: 'Limited Edition', slug: 'limited', tagline: 'Once it is gone, it is gone.', description: 'Numbered, strictly limited releases for the few.', image: real('silence'), featured: true, order: 4 },
 ];
 
+// Unique reviews — assigned without repetition across the catalogue (see loop below).
 const REVIEWS_POOL = [
-  { authorName: 'Yassine B.', rating: 5, title: 'Best tee I own', body: 'The weight of this cotton is unreal. Feels premium, fits perfect oversized. Delivery was fast and free.' },
-  { authorName: 'Salma E.', rating: 5, title: 'Obsessed', body: 'Exactly like the photos. The print quality is so clean. Already ordered a second one.' },
-  { authorName: 'Mehdi A.', rating: 5, title: 'Premium quality', body: 'You can feel the difference vs cheap streetwear. 240 GSM is no joke. COD made it easy.' },
-  { authorName: 'Imane K.', rating: 4, title: 'Love it', body: 'Great fit and material. Wanted it slightly longer but still amazing for the price.' },
-  { authorName: 'Omar T.', rating: 5, title: 'Worth every dirham', body: 'Heavyweight, structured, and the oversized fit is exactly what I wanted. NOVYR is the real deal.' },
+  { authorName: 'Yassine B.', rating: 5, title: 'Best tee I own', body: 'The weight of this cotton is unreal — heavy, structured, fits perfect oversized.' },
+  { authorName: 'Salma E.', rating: 5, title: 'Obsessed', body: 'Exactly like the photos, the print quality is so clean. Already ordered a second.' },
+  { authorName: 'Mehdi A.', rating: 5, title: 'Premium quality', body: 'You feel the difference vs cheap streetwear. COD made it effortless.' },
+  { authorName: 'Imane K.', rating: 4, title: 'Love the fit', body: 'Great material and drape — wanted it a touch longer but still amazing.' },
+  { authorName: 'Omar T.', rating: 5, title: 'Worth every dirham', body: 'Heavyweight and clean. NOVYR is the real deal.' },
+  { authorName: 'Aya R.', rating: 5, title: 'Print is insane', body: 'The graphic looks even better in person. So many compliments.' },
+  { authorName: 'Hamza L.', rating: 5, title: 'Fits like a dream', body: 'Boxy oversized exactly how I like it. Fast free delivery too.' },
+  { authorName: 'Nada B.', rating: 4, title: 'Really good', body: 'Lovely heavy cotton. Sizing runs generous — size down if unsure.' },
+  { authorName: 'Anas M.', rating: 5, title: 'Quality streetwear', body: 'Thick fabric and no cracking on the print after a few washes.' },
+  { authorName: 'Sara H.', rating: 5, title: 'My new favorite', body: 'Wear it every week and it holds its shape perfectly.' },
+  { authorName: 'Ayoub Z.', rating: 5, title: 'Clean and premium', body: 'Looks luxury, feels luxury. Delivered in 3 days to Casa.' },
+  { authorName: 'Lina F.', rating: 4, title: 'Great piece', body: 'Beautiful print and weight. The packaging felt premium too.' },
+  { authorName: 'Reda K.', rating: 5, title: 'Top tier', body: 'Heavier than other brands I own. Completely worth it.' },
+  { authorName: 'Ghita S.', rating: 5, title: 'Stunning', body: 'The detail on the graphic is unreal. Will definitely buy more.' },
+  { authorName: 'Karim B.', rating: 5, title: 'Solid drop', body: 'Fit, weight, print — all on point. COD is a big plus.' },
+  { authorName: 'Meryem T.', rating: 4, title: 'Very nice', body: 'Soft but heavy. Delivery to Oujda took a little longer but worth it.' },
+  { authorName: 'Bilal A.', rating: 5, title: 'Exceeded expectations', body: "Photos don't do it justice. Premium all the way." },
+  { authorName: 'Hiba L.', rating: 5, title: 'In love', body: 'Oversized fit is perfect and the cotton is genuinely thick.' },
+  { authorName: 'Soufiane R.', rating: 5, title: 'Best in Morocco', body: 'Finally a local brand with real quality.' },
+  { authorName: 'Douaa M.', rating: 4, title: 'Happy with it', body: 'Great tee, true to the pictures. Would recommend.' },
+  { authorName: 'Zakaria H.', rating: 5, title: 'Premium feel', body: 'Structured heavyweight cotton with a crisp print. 10/10.' },
+  { authorName: 'Nizar E.', rating: 5, title: 'Amazing quality', body: 'Wore it out and got asked where it was from all night.' },
+  { authorName: 'Kenza B.', rating: 5, title: 'Perfect', body: 'Exactly what I wanted — clean, heavy, oversized.' },
+  { authorName: 'Othmane S.', rating: 4, title: 'Really solid', body: 'Good weight and print. The quality justifies the price.' },
+  { authorName: 'Rania K.', rating: 5, title: 'Obsessed again', body: 'Second order, same great quality and fast shipping.' },
+  { authorName: 'Adam T.', rating: 5, title: 'Worth it', body: 'Heavy cotton, not see-through, and the print stays sharp.' },
+  { authorName: 'Salma B.', rating: 5, title: 'Beautiful', body: 'The graphic is art. Fits oversized and feels premium.' },
+  { authorName: 'Yahya M.', rating: 5, title: 'Top quality', body: 'Better than brands costing double. COD made it easy.' },
+  { authorName: 'Hajar L.', rating: 4, title: 'Lovely', body: 'Great material and a generous fit. Happy customer.' },
+  { authorName: 'Ziad R.', rating: 5, title: 'Elite', body: 'NOVYR nailed it — weight, fit, and print all premium.' },
 ];
 
 async function main() {
@@ -361,6 +387,7 @@ async function main() {
   }
 
   let skuCounter = 1000;
+  let reviewCursor = 0; // assigns each pool review exactly once → no duplicate reviews
   for (const p of PRODUCTS) {
     const baseSku = `NVR-${skuCounter++}`;
     const product = await prisma.product.create({
@@ -368,9 +395,9 @@ async function main() {
         name: p.name,
         slug: p.slug,
         description: p.description,
-        // Flat catalogue price — was 279 DH, now 199 DH
+        // Flat catalogue price — no fabricated discount (no permanent compare-at anchor)
         priceCents: 19900,
-        compareAtCents: 27900,
+        compareAtCents: null,
         sku: baseSku,
         gsm: 240,
         material: '100% Heavyweight Combed Cotton',
@@ -380,7 +407,7 @@ async function main() {
         isBestSeller: p.flags?.isBestSeller ?? false,
         isNewArrival: p.flags?.isNewArrival ?? false,
         isLimited: p.flags?.isLimited ?? false,
-        metaTitle: `${p.name} | NOVYR`,
+        metaTitle: p.name,
         metaDescription: p.description.slice(0, 155),
         dropEndsAt: p.dropInDays ? new Date(Date.now() + p.dropInDays * 24 * 60 * 60 * 1000) : null,
         categoryId: categoryMap.get('tshirts') ?? null,
@@ -399,9 +426,8 @@ async function main() {
     });
 
     if (p.flags?.isFeatured || p.flags?.isBestSeller) {
-      const count = 3 + Math.floor(Math.random() * 2);
-      for (let i = 0; i < count; i++) {
-        const r = REVIEWS_POOL[(skuCounter + i) % REVIEWS_POOL.length];
+      for (let i = 0; i < 2 && reviewCursor < REVIEWS_POOL.length; i++) {
+        const r = REVIEWS_POOL[reviewCursor++]!;
         await prisma.review.create({
           data: { productId: product.id, authorName: r.authorName, rating: r.rating, title: r.title, body: r.body, verified: true, approved: true },
         });

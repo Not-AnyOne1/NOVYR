@@ -315,3 +315,13 @@ export async function getTopReviews(take = 6) {
     createdAt: r.createdAt.toISOString(),
   }));
 }
+
+/** Real aggregate review stats across the whole catalogue (for the homepage). */
+export async function getReviewStats(): Promise<{ count: number; average: number }> {
+  const r = await prisma.review.aggregate({
+    where: { approved: true },
+    _count: true,
+    _avg: { rating: true },
+  });
+  return { count: r._count, average: Math.round((r._avg.rating ?? 0) * 10) / 10 };
+}

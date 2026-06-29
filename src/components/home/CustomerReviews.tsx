@@ -12,10 +12,19 @@ type ReviewCard = {
   productName: string | null;
 };
 
-export function CustomerReviews({ reviews }: { reviews: ReviewCard[] }) {
+export function CustomerReviews({
+  reviews,
+  stats,
+}: {
+  reviews: ReviewCard[];
+  stats?: { count: number; average: number };
+}) {
   if (!reviews.length) return null;
 
-  const avg = Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviews.length) * 10) / 10;
+  // Real catalogue-wide stats when provided; otherwise fall back to the sample.
+  const sampleAvg = Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviews.length) * 10) / 10;
+  const avg = stats && stats.count > 0 ? stats.average : sampleAvg;
+  const totalCount = stats && stats.count > 0 ? stats.count : reviews.length;
 
   return (
     <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:py-32">
@@ -29,7 +38,9 @@ export function CustomerReviews({ reviews }: { reviews: ReviewCard[] }) {
               <span className="font-display text-6xl font-extrabold text-white">{avg.toFixed(1)}</span>
               <div className="pb-1.5">
                 <StarRating rating={avg} size={18} />
-                <p className="mt-1 text-xs text-smoke">Based on {reviews.length}+ verified reviews</p>
+                <p className="mt-1 text-xs text-smoke">
+                  Based on {totalCount} verified {totalCount === 1 ? 'review' : 'reviews'}
+                </p>
               </div>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-smoke">
