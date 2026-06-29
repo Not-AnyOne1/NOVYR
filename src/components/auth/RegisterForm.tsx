@@ -11,7 +11,9 @@ import { GoogleButton } from '@/components/auth/GoogleButton';
 export function RegisterForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/account';
+  // Only allow same-site relative paths (never an absolute/localhost/external URL)
+  const rawCallback = searchParams.get('callbackUrl');
+  const callbackUrl = rawCallback && rawCallback.startsWith('/') && !rawCallback.startsWith('//') ? rawCallback : '/account';
 
   const [form, setForm] = useState({ name: '', email: '', password: '', confirmPassword: '' });
   const [show, setShow] = useState(false);
