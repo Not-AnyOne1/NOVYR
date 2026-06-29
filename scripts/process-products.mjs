@@ -42,6 +42,26 @@ const ITEMS = [
   { key: 'suffer', file: 'ChatGPT Image 27 juin 2026, 00_45_13.png', gravity: 'centre', zoom: 1, printTop: 0.45, detailTop: 0.1 },
   { key: 'disorders', file: 'ChatGPT Image 27 juin 2026, 00_27_15.png', gravity: 'centre', zoom: 0.98, printTop: 0.5, detailTop: 0.12 },
   { key: 'wrong', file: 'ChatGPT Image 27 juin 2026, 00_25_49.png', gravity: 'centre', zoom: 1, printTop: 0.48, detailTop: 0.1 },
+  // ── drop 004 ──
+  { key: 'ftw', file: 'nv-ftw.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'street', file: 'nv-street.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'outlaw', file: 'nv-outlaw.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'bornthisway', file: 'nv-bornthisway.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'change', file: 'nv-change.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'dontlikeus', file: 'nv-dontlikeus.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'yourstruly', file: 'nv-yourstruly.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'muse', file: 'nv-muse.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'wanted', file: 'nv-wanted.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'exodus', file: 'nv-exodus.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'resilience', file: 'nv-resilience.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'mercy', file: 'nv-mercy.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'redemption', file: 'nv-redemption.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'angel', file: 'nv-angel.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'darkvision', file: 'nv-darkvision.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'smoke', file: 'nv-smoke.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'mirage', file: 'nv-mirage.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'phoenix', file: 'nv-phoenix.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'lostinspace', file: 'nv-lostinspace.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
 ];
 
 const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
