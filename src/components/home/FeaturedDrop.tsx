@@ -33,7 +33,7 @@ export function FeaturedDrop({ product }: { product: ProductListItem | null }) {
                 alt={`${product.name} — front`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain p-4 sm:p-6"
               />
               <span className="absolute left-4 top-4 rounded-full border border-white/15 bg-ink-900/70 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white backdrop-blur">
                 {product.isLimited ? 'Limited Drop' : 'Featured'}
@@ -44,7 +44,7 @@ export function FeaturedDrop({ product }: { product: ProductListItem | null }) {
             {/* Back graphic chip */}
             <div className="absolute -bottom-8 -left-4 hidden w-40 overflow-hidden rounded-2xl border border-white/10 bg-ink-800 shadow-lift sm:block lg:-left-10 lg:w-48">
               <div className="relative aspect-[4/5]">
-                <Image src={backImage} alt={`${product.name} — back`} fill sizes="200px" className="object-cover" />
+                <Image src={backImage} alt={`${product.name} — back`} fill sizes="200px" className="object-contain p-2" />
                 <span className="absolute right-3 top-3 font-mono text-[10px] text-white/60">BACK</span>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LegalLayout } from '@/components/marketing/LegalLayout';
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function ShippingPolicyPage() {
       <p>All orders are paid by <strong>cash on delivery (COD)</strong>. You pay the courier in cash when your package arrives — no card or prepayment is required. Our delivery partner will call you to confirm your order before dispatch, so please make sure the phone number you provide is correct and reachable.</p>
 
       <h2>Order tracking</h2>
-      <p>You can check the status of your order at any time from your <a href="/account/orders">account</a>. We update the status as your order moves from confirmed to shipped to delivered.</p>
+      <p>You can check the status of your order at any time from your <Link href="/account/orders">account</Link>. We update the status as your order moves from confirmed to shipped to delivered.</p>
 
       <h2>Failed deliveries</h2>
       <p>If we cannot reach you to confirm or our courier cannot complete delivery after multiple attempts, the order may be cancelled. Repeated COD refusals may affect future orders.</p>

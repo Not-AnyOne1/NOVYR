@@ -69,7 +69,9 @@ export function ProductCard({
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             priority={priority}
             className={cn(
-              'object-cover transition-all duration-[900ms] ease-out-expo group-hover:scale-[1.04]',
+              // object-contain + padding: whole garment always visible, never
+              // cropped, with consistent breathing room on every screen size.
+              'object-contain p-2.5 transition-all duration-[900ms] ease-out-expo group-hover:scale-[1.04] sm:p-3',
               soldOut && 'opacity-60 grayscale'
             )}
           />
