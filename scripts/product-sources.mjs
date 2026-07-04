@@ -52,4 +52,22 @@ export const ITEMS = [
   { key: 'mirage', file: 'nv-mirage.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   { key: 'phoenix', file: 'nv-phoenix.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   { key: 'lostinspace', file: 'nv-lostinspace.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  // ── drop 005 (July 2026) ──
+  { key: 'talktoomuch', file: 'ChatGPT Image 2 juil. 2026, 15_15_55.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'streetways', file: 'ChatGPT Image 2 juil. 2026, 15_20_36.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'toldchatgpt', file: 'ChatGPT Image 2 juil. 2026, 15_26_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'bornthisway', file: 'ChatGPT Image 2 juil. 2026, 15_51_08.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'change555', file: 'ChatGPT Image 2 juil. 2026, 16_00_03.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'theynotlikeus', file: 'ChatGPT Image 2 juil. 2026, 16_03_14.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'euphoria', file: 'ChatGPT Image 4 juil. 2026, 02_25_14.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'writhers', file: 'ChatGPT Image 4 juil. 2026, 02_54_53.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  // key darkvision2: legacy darkvision.webp belongs to the archived first
+  // Dark Vision Tee and is referenced by a real order — never overwrite it.
+  { key: 'darkvision2', file: 'ChatGPT Image 4 juil. 2026, 02_56_34.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'lavish', file: 'ChatGPT Image 4 juil. 2026, 02_59_45.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'fein', file: 'ChatGPT Image 4 juil. 2026, 03_01_40.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'savages', file: 'ChatGPT Image 4 juil. 2026, 03_05_27.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'prettygirls', file: 'ChatGPT Image 4 juil. 2026, 03_07_07.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'hellstar', file: 'photo_2026-07-04_03-03-30.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'thug', file: 'photo_2026-07-04_03-03-31.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
 ];
