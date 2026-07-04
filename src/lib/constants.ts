@@ -23,7 +23,7 @@ export const SITE = {
   currency: 'MAD',
   locale: 'en_MA',
   social: {
-    instagram: 'https://instagram.com/novyr.shop',
+    instagram: 'https://www.instagram.com/novyr_shopp',
     tiktok: 'https://tiktok.com/@novyr',
     twitter: 'https://twitter.com/novyr',
   },
