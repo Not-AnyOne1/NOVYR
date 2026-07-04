@@ -2,13 +2,16 @@ import type { NextAuthConfig } from 'next-auth';
 import { NextResponse } from 'next/server';
 
 /**
- * Build a relative (host-less) redirect. The browser resolves the `Location`
- * header against the current request origin, so it ALWAYS stays on the live
- * domain (Vercel / custom) and can never point at localhost — independent of
- * AUTH_URL / NEXTAUTH_URL.
+ * Redirect resolved against the REAL incoming request's Host header (we run
+ * with `trustHost: true`), never against AUTH_URL/NEXTAUTH_URL — so it always
+ * stays on the domain the visitor is actually on and can never point at
+ * localhost in production. Absolute URL required: Auth.js parses the Location
+ * header with `new URL()` and throws "Invalid URL" on host-less paths.
  */
-function relativeRedirect(path: string) {
-  return new NextResponse(null, { status: 307, headers: { Location: path } });
+function requestRedirect(req: { headers: Headers }, path: string) {
+  const proto = req.headers.get('x-forwarded-proto') ?? 'http';
+  const host = req.headers.get('host') ?? 'localhost:3000';
+  return NextResponse.redirect(new URL(path, `${proto}://${host}`));
 }
 
 /**
@@ -39,22 +42,22 @@ export const authConfig = {
       }
       return session;
     },
-    authorized({ auth, request: { nextUrl } }) {
+    authorized({ auth, request }) {
       const isLoggedIn = Boolean(auth?.user);
       const role = auth?.user?.role;
-      const { pathname, search } = nextUrl;
+      const { pathname, search } = request.nextUrl;
       const callbackUrl = encodeURIComponent(pathname + search);
 
       // Admin area — requires ADMIN role
       if (pathname.startsWith('/admin')) {
         if (isLoggedIn && role === 'ADMIN') return true;
-        return relativeRedirect(isLoggedIn ? '/' : `/login?callbackUrl=${callbackUrl}`);
+        return requestRedirect(request, isLoggedIn ? '/' : `/login?callbackUrl=${callbackUrl}`);
       }
 
       // Customer account — requires any logged-in user
       if (pathname.startsWith('/account')) {
         if (isLoggedIn) return true;
-        return relativeRedirect(`/login?callbackUrl=${callbackUrl}`);
+        return requestRedirect(request, `/login?callbackUrl=${callbackUrl}`);
       }
 
       return true;

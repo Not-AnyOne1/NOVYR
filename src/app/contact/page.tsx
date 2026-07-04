@@ -24,7 +24,7 @@ export default function ContactPage() {
         <div className="space-y-5">
           {[
             { icon: Mail, label: 'Email', value: SITE.email, href: `mailto:${SITE.email}` },
-            { icon: Instagram, label: 'Instagram', value: '@novyr', href: SITE.social.instagram },
+            { icon: Instagram, label: 'Instagram', value: '@novyr_shop', href: SITE.social.instagram },
             { icon: Clock, label: 'Hours', value: 'Mon–Sat · 9:00–19:00' },
             { icon: MapPin, label: 'Based in', value: 'Casablanca, Morocco' },
           ].map((c) => (

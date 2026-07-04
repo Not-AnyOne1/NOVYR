@@ -147,17 +147,14 @@ export const adminDiscountSchema = z.object({
   endsAt: z.string().datetime().nullable().optional(),
 });
 
-export const adminOrderStatusSchema = z.object({
-  status: z.enum([
-    'PENDING',
-    'CONFIRMED',
-    'PROCESSING',
-    'SHIPPED',
-    'DELIVERED',
-    'CANCELLED',
-    'REFUNDED',
-  ]),
-});
+export const adminOrderStatusSchema = z
+  .object({
+    status: z
+      .enum(['PENDING', 'CONFIRMED', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'CANCELLED', 'REFUNDED'])
+      .optional(),
+    paymentStatus: z.enum(['PENDING', 'PAID', 'FAILED', 'REFUNDED']).optional(),
+  })
+  .refine((d) => d.status || d.paymentStatus, { message: 'Nothing to update' });
 
 export const adminCategorySchema = z.object({
   name: z.string().trim().min(2).max(80),

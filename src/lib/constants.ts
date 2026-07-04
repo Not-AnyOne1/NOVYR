@@ -18,12 +18,12 @@ export const SITE = {
   description:
     'NOVYR is a premium streetwear brand — heavyweight oversized t-shirts, graphic collections and limited drops. Free delivery anywhere in Morocco. Cash on delivery.',
   url: resolveSiteUrl(),
-  email: 'support@novyr.com',
+  email: 'novyr.shop@gmail.com',
   phone: '+212 6 00 00 00 00',
   currency: 'MAD',
   locale: 'en_MA',
   social: {
-    instagram: 'https://instagram.com/novyr',
+    instagram: 'https://instagram.com/novyr_shop',
     tiktok: 'https://tiktok.com/@novyr',
     twitter: 'https://twitter.com/novyr',
   },
@@ -220,6 +220,13 @@ export const ORDER_STATUS_LABEL: Record<string, string> = {
   SHIPPED: 'Shipped',
   DELIVERED: 'Delivered',
   CANCELLED: 'Cancelled',
+  REFUNDED: 'Refunded',
+};
+
+export const PAYMENT_STATUS_LABEL: Record<string, string> = {
+  PENDING: 'Pending',
+  PAID: 'Paid',
+  FAILED: 'Failed',
   REFUNDED: 'Refunded',
 };
 

@@ -77,20 +77,6 @@ const PRODUCTS: SeedProduct[] = [
     dropInDays: 2,
   },
   {
-    name: 'Silence Oversized Tee',
-    slug: 'silence-oversized-tee',
-    description:
-      'A washed-black heavyweight tee carrying a chrome-skull graphic and hand-script "Silence" front print. High-density water-based ink on 240 GSM combed cotton. A numbered drop for those who let the work speak.',
-    imageKey: 'silence',
-    priceCents: 34900,
-    compareAtCents: 44900,
-    collections: ['graphic', 'oversized', 'limited'],
-    sizes: TEE_SIZES,
-    stock: [4, 6, 7, 5, 3, 2],
-    flags: { isFeatured: true, isBestSeller: true, isLimited: true },
-    dropInDays: 6,
-  },
-  {
     name: 'Spider Washed Tee',
     slug: 'spider-washed-tee',
     description:
@@ -103,32 +89,6 @@ const PRODUCTS: SeedProduct[] = [
     stock: [3, 5, 6, 5, 3, 1],
     flags: { isBestSeller: true, isNewArrival: true, isLimited: true },
     dropInDays: 14,
-  },
-  {
-    name: 'Extreme Oversized Tee',
-    slug: 'extreme-oversized-tee',
-    description:
-      'Oversized drop-shoulder tee with a red halftone portrait and gothic script. 240 GSM heavyweight cotton, garment-washed. Bold, unapologetic, built for the street.',
-    imageKey: 'extreme',
-    priceCents: 31900,
-    compareAtCents: 41900,
-    collections: ['graphic', 'oversized'],
-    sizes: TEE_SIZES,
-    stock: [10, 18, 24, 22, 14, 6],
-    flags: { isFeatured: true, isBestSeller: true },
-  },
-  {
-    name: 'Livelihood Oversized Tee',
-    slug: 'livelihood-oversized-tee',
-    description:
-      'Statue-and-drip back graphic with a "rec-frame" motif, printed edge-to-edge on a boxy 240 GSM body. The kind of piece people stop you to ask about. Premium inks that never crack or fade.',
-    imageKey: 'livelihood',
-    priceCents: 32900,
-    compareAtCents: 42900,
-    collections: ['graphic', 'oversized'],
-    sizes: TEE_SIZES,
-    stock: [8, 14, 18, 16, 10, 4],
-    flags: { isFeatured: true, isBestSeller: true },
   },
   {
     name: 'Desire Oversized Tee',
@@ -167,18 +127,6 @@ const PRODUCTS: SeedProduct[] = [
     flags: { isBestSeller: true, isNewArrival: true },
   },
   {
-    name: 'Samson Heavyweight Tee',
-    slug: 'samson-heavyweight-tee',
-    description:
-      'A monochrome "Samson and the Lion" back print rendered in fine halftone with gothic lettering. Heavyweight 240 GSM cotton, oversized fit. Timeless, tonal, and built to last seasons.',
-    imageKey: 'samson',
-    priceCents: 33900,
-    collections: ['graphic', 'oversized', 'essentials'],
-    sizes: TEE_SIZES,
-    stock: [7, 13, 17, 15, 9, 4],
-    flags: { isBestSeller: true, isNewArrival: true },
-  },
-  {
     name: 'Breathe Oversized Tee',
     slug: 'breathe-oversized-tee',
     description:
@@ -202,59 +150,7 @@ const PRODUCTS: SeedProduct[] = [
     stock: [12, 18, 22, 20, 13, 6],
     flags: { isNewArrival: true },
   },
-  {
-    name: 'Syndicate Oversized Tee',
-    slug: 'syndicate-oversized-tee',
-    description:
-      'Underground mask graphic with arched collar type. A numbered limited release on 240 GSM heavyweight cotton, garment-washed. Strictly limited — when it is gone, it is gone.',
-    imageKey: 'syndicate',
-    priceCents: 31900,
-    collections: ['graphic', 'limited'],
-    sizes: TEE_SIZES,
-    stock: [3, 5, 6, 4, 2, 1],
-    flags: { isLimited: true, isNewArrival: true },
-    dropInDays: 9,
-  },
   // ── drop 003 ──
-  {
-    name: 'Money & Love Oversized Tee',
-    slug: 'money-love-oversized-tee',
-    description:
-      '"In God We Trust" — an ornate Persian-rug graphic with hand-script "Money / Love". Printed edge-to-edge on a 240 GSM oversized body. Opulent, ironic, unmistakable.',
-    imageKey: 'moneylove',
-    priceCents: 19900,
-    compareAtCents: 27900,
-    collections: ['graphic', 'oversized'],
-    sizes: TEE_SIZES,
-    stock: [10, 16, 20, 18, 12, 5],
-    flags: { isFeatured: true, isNewArrival: true },
-  },
-  {
-    name: 'Don’t Get Lost Tee',
-    slug: 'dont-get-lost-tee',
-    description:
-      '"Do not get lost in the darkness" — a blue-toned cinematic graphic of a lone figure chasing the light. 240 GSM heavyweight cotton, oversized fit. A reminder, printed.',
-    imageKey: 'getlost',
-    priceCents: 19900,
-    compareAtCents: 27900,
-    collections: ['graphic', 'oversized'],
-    sizes: TEE_SIZES,
-    stock: [9, 15, 19, 17, 11, 5],
-    flags: { isNewArrival: true },
-  },
-  {
-    name: 'G.O.A.T Oversized Tee',
-    slug: 'goat-oversized-tee',
-    description:
-      'A winged-goat icon framed in ornament with Arabic lettering — a statement of greatness. High-density print on a 240 GSM oversized body. Bold, surreal, premium.',
-    imageKey: 'goat',
-    priceCents: 19900,
-    compareAtCents: 27900,
-    collections: ['graphic', 'oversized'],
-    sizes: TEE_SIZES,
-    stock: [8, 14, 18, 16, 10, 4],
-    flags: { isFeatured: true, isBestSeller: true, isNewArrival: true },
-  },
   {
     name: 'Suffer Oversized Tee',
     slug: 'suffer-oversized-tee',
@@ -267,20 +163,6 @@ const PRODUCTS: SeedProduct[] = [
     sizes: TEE_SIZES,
     stock: [9, 14, 18, 16, 10, 5],
     flags: { isBestSeller: true, isNewArrival: true },
-  },
-  {
-    name: 'Disorders Oversized Tee',
-    slug: 'disorders-oversized-tee',
-    description:
-      'A raw, grunge-collage portrait graphic with scratched typography. A numbered limited release on 240 GSM heavyweight cotton, garment-washed. Unfiltered and strictly limited.',
-    imageKey: 'disorders',
-    priceCents: 19900,
-    compareAtCents: 27900,
-    collections: ['graphic', 'oversized', 'limited'],
-    sizes: TEE_SIZES,
-    stock: [4, 6, 7, 5, 3, 2],
-    flags: { isLimited: true, isNewArrival: true },
-    dropInDays: 11,
   },
   {
     name: 'So Wrong Oversized Tee',
@@ -296,25 +178,6 @@ const PRODUCTS: SeedProduct[] = [
     flags: { isBestSeller: true, isNewArrival: true },
   },
   // ── drop 004 ──
-  { name: 'FTW Oversized Tee', slug: 'ftw-oversized-tee', description: 'Bold "FTW" front-and-back graphic on heavyweight 240 GSM combed cotton. Oversized, garment-washed, unapologetic.', imageKey: 'ftw', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isBestSeller: true, isNewArrival: true } },
-  { name: 'Street Oversized Tee', slug: 'street-oversized-tee', description: '"Street" hooded-figure graphic on a washed 240 GSM body. Raw, urban and uncompromising.', imageKey: 'street', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Outlaw Oversized Tee', slug: 'outlaw-oversized-tee', description: '"Outlaw" star graphic on a washed heavyweight body. 240 GSM cotton, drop-shoulder oversized fit.', imageKey: 'outlaw', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isFeatured: true, isNewArrival: true } },
-  { name: 'Born This Way Tee', slug: 'born-this-way-tee', description: '"Born This Way" portrait graphic on premium 240 GSM combed cotton. Boxy oversized drape.', imageKey: 'bornthisway', priceCents: 19900, collections: ['graphic', 'oversized', 'essentials'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Change Oversized Tee', slug: 'change-oversized-tee', description: '"Change" hand-script graphic on a clean 240 GSM body. Soft-hand premium print.', imageKey: 'change', priceCents: 19900, collections: ['graphic', 'oversized', 'essentials'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: "Don't Like Us Tee", slug: 'dont-like-us-tee', description: '"They Don\'t Like Us" washed graphic tee with a vintage hand-feel. 240 GSM heavyweight cotton.', imageKey: 'dontlikeus', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isFeatured: true, isNewArrival: true } },
-  { name: 'Yours Truly Tee', slug: 'yours-truly-tee', description: '"Yours Truly" statement graphic on heavyweight 240 GSM cotton. Oversized and clean.', imageKey: 'yourstruly', priceCents: 19900, collections: ['graphic', 'oversized', 'essentials'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Muse Oversized Tee', slug: 'muse-oversized-tee', description: '"Muse" bold graphic on a clean body. Premium 240 GSM combed cotton, oversized fit.', imageKey: 'muse', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isBestSeller: true, isNewArrival: true } },
-  { name: 'The Wanted Tee', slug: 'the-wanted-tee', description: '"The Wanted" cinematic panel graphic. 240 GSM heavyweight cotton, drop-shoulder oversized.', imageKey: 'wanted', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Exodus Oversized Tee', slug: 'exodus-oversized-tee', description: '"Exodus" landscape-panel graphic on premium 240 GSM cotton. Boxy oversized cut.', imageKey: 'exodus', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isFeatured: true, isBestSeller: true, isNewArrival: true } },
-  { name: 'Resilience Tee', slug: 'resilience-tee', description: '"Resilience" portrait graphic — a numbered limited release on 240 GSM heavyweight cotton.', imageKey: 'resilience', priceCents: 19900, collections: ['graphic', 'oversized', 'limited'], sizes: TEE_SIZES, stock: [4, 6, 7, 5, 3, 2], flags: { isLimited: true, isNewArrival: true }, dropInDays: 8 },
-  { name: 'No Mercy Tee', slug: 'no-mercy-tee', description: '"Death Has No Mercy" graphic on heavyweight 240 GSM cotton. Strictly limited, numbered release.', imageKey: 'mercy', priceCents: 19900, collections: ['graphic', 'oversized', 'limited'], sizes: TEE_SIZES, stock: [4, 6, 7, 5, 3, 2], flags: { isLimited: true, isNewArrival: true }, dropInDays: 12 },
-  { name: 'Redemption Tee', slug: 'redemption-tee', description: '"Redemption" panel graphic on a clean body. Premium 240 GSM combed cotton, oversized.', imageKey: 'redemption', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isBestSeller: true, isNewArrival: true } },
-  { name: 'Angel Oversized Tee', slug: 'angel-oversized-tee', description: '"Angel" winged-figure graphic on 240 GSM heavyweight cotton. Drop-shoulder oversized fit.', imageKey: 'angel', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Dark Vision Tee', slug: 'dark-vision-tee', description: '"Dark Vision" minimal graphic on premium 240 GSM cotton. Boxy oversized silhouette.', imageKey: 'darkvision', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isFeatured: true, isNewArrival: true } },
-  { name: 'Smoke Oversized Tee', slug: 'smoke-oversized-tee', description: '"Smoke" abstract figure graphic on heavyweight 240 GSM cotton. Oversized and understated.', imageKey: 'smoke', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isNewArrival: true } },
-  { name: 'Mirage Oversized Tee', slug: 'mirage-oversized-tee', description: '"Mirage" graphic on a washed body — a numbered limited release. 240 GSM heavyweight cotton.', imageKey: 'mirage', priceCents: 19900, collections: ['graphic', 'oversized', 'limited'], sizes: TEE_SIZES, stock: [4, 6, 7, 5, 3, 2], flags: { isLimited: true, isNewArrival: true }, dropInDays: 15 },
-  { name: 'Phoenix Oversized Tee', slug: 'phoenix-oversized-tee', description: '"Phoenix" graphic in cold tones on premium 240 GSM cotton. Drop-shoulder oversized.', imageKey: 'phoenix', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isFeatured: true, isBestSeller: true, isNewArrival: true } },
-  { name: 'Lost In Space Tee', slug: 'lost-in-space-tee', description: '"Lost In Space" graphic on heavyweight 240 GSM cotton. Oversized fit, premium print.', imageKey: 'lostinspace', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [10, 16, 20, 18, 12, 5], flags: { isBestSeller: true, isNewArrival: true } },
 ];
 
 const CATEGORIES = [
@@ -322,10 +185,10 @@ const CATEGORIES = [
 ];
 
 const COLLECTIONS = [
-  { name: 'Oversized Collection', slug: 'oversized', tagline: 'Built for the drop-shoulder silhouette.', description: 'Our signature boxy, drop-shoulder cuts in heavyweight cotton.', image: real('samson'), featured: true, order: 1 },
+  { name: 'Oversized Collection', slug: 'oversized', tagline: 'Built for the drop-shoulder silhouette.', description: 'Our signature boxy, drop-shoulder cuts in heavyweight cotton.', image: real('dark'), featured: true, order: 1 },
   { name: 'Graphic Collection', slug: 'graphic', tagline: 'Wearable statements.', description: 'Bold, high-density prints that never crack or fade.', image: real('peace'), featured: true, order: 2 },
   { name: 'Essentials Collection', slug: 'essentials', tagline: 'The foundation.', description: 'Endlessly wearable staples engineered to last.', image: real('breathe'), featured: true, order: 3 },
-  { name: 'Limited Edition', slug: 'limited', tagline: 'Once it is gone, it is gone.', description: 'Numbered, strictly limited releases for the few.', image: real('silence'), featured: true, order: 4 },
+  { name: 'Limited Edition', slug: 'limited', tagline: 'Once it is gone, it is gone.', description: 'Numbered, strictly limited releases for the few.', image: real('wrong'), featured: true, order: 4 },
 ];
 
 // Unique reviews — assigned without repetition across the catalogue (see loop below).
@@ -493,16 +356,16 @@ async function main() {
 
   await prisma.heroSlide.createMany({
     data: [
-      { eyebrow: 'NEW DROP — LIVE NOW', title: 'WEAR THE CULTURE.', subtitle: 'Premium oversized graphic tees, printed for the few.', ctaLabel: 'Shop The Drop', ctaHref: '/collections/limited', image: real('livelihood'), order: 0 },
-      { eyebrow: '240 GSM HEAVYWEIGHT', title: 'BUILT TO OUTLAST.', subtitle: 'Heavyweight cotton, high-density prints, a fit that owns the street.', ctaLabel: 'Explore Collection', ctaHref: '/shop', image: real('samson'), order: 1 },
+      { eyebrow: 'NEW DROP — LIVE NOW', title: 'WEAR THE CULTURE.', subtitle: 'Premium oversized graphic tees, printed for the few.', ctaLabel: 'Shop The Drop', ctaHref: '/collections/limited', image: real('peace'), order: 0 },
+      { eyebrow: '240 GSM HEAVYWEIGHT', title: 'BUILT TO OUTLAST.', subtitle: 'Heavyweight cotton, high-density prints, a fit that owns the street.', ctaLabel: 'Explore Collection', ctaHref: '/shop', image: real('dark'), order: 1 },
     ],
   });
 
   await prisma.lookbookImage.createMany({
     data: [
-      { url: real('livelihood'), caption: 'SS26 Campaign', span: 'tall', order: 0 },
+      { url: real('breathe'), caption: 'SS26 Campaign', span: 'tall', order: 0 },
       { url: real('peace'), caption: 'Peace Edition', span: 'normal', order: 1 },
-      { url: real('samson'), caption: 'Statement Backs', span: 'wide', order: 2 },
+      { url: real('suffer'), caption: 'Statement Prints', span: 'wide', order: 2 },
       { url: real('desire'), caption: 'Desire', span: 'normal', order: 3 },
       { url: real('spider'), caption: 'Washed Series', span: 'normal', order: 4 },
       { url: real('lonely'), caption: 'Eyes of Darkness', span: 'tall', order: 5 },

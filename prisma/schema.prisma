@@ -262,12 +262,23 @@ enum PaymentMethod {
   COD
 }
 
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
 model Order {
   id          String        @id @default(cuid())
+  // Human-readable sequential order id: NVR-00001, NVR-00002, …
+  seq         Int           @unique @default(autoincrement())
   orderNumber String        @unique
   userId      String?
   status      OrderStatus   @default(PENDING)
   paymentMethod PaymentMethod @default(COD)
+  // COD: PENDING until cash is collected on delivery, then PAID
+  paymentStatus PaymentStatus @default(PENDING)
 
   // Customer (snapshot — supports guest checkout)
   customerName  String

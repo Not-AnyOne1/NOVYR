@@ -9,16 +9,23 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
 
   const parsed = adminOrderStatusSchema.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
+  const { status, paymentStatus } = parsed.data;
 
   const existing = await prisma.order.findUnique({ where: { id }, include: { items: true } });
   if (!existing) return NextResponse.json({ error: 'Order not found' }, { status: 404 });
 
   // Restock items when cancelling a previously active order
   const wasActive = !['CANCELLED', 'REFUNDED'].includes(existing.status);
-  const willCancel = ['CANCELLED', 'REFUNDED'].includes(parsed.data.status);
+  const willCancel = status ? ['CANCELLED', 'REFUNDED'].includes(status) : false;
 
   await prisma.$transaction(async (tx) => {
-    await tx.order.update({ where: { id }, data: { status: parsed.data.status } });
+    await tx.order.update({
+      where: { id },
+      data: {
+        ...(status ? { status } : {}),
+        ...(paymentStatus ? { paymentStatus } : {}),
+      },
+    });
     if (wasActive && willCancel) {
       for (const item of existing.items) {
         if (item.variantId) {

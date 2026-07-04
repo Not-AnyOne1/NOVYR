@@ -93,7 +93,9 @@ export async function createOrder(
 
   const shippingCents = freeShipping ? 0 : SHIPPING_CENTS;
   const totalCents = Math.max(0, subtotalCents - discountCents + shippingCents);
-  const orderNumber = generateOrderNumber();
+  // Collision-proof placeholder; replaced with the sequential NVR-##### number
+  // (derived from the DB autoincrement) before the transaction commits.
+  const placeholderNumber = generateOrderNumber();
 
   const order = await prisma.$transaction(async (tx) => {
     // Re-check & decrement stock inside the transaction to avoid oversell
@@ -118,12 +120,13 @@ export async function createOrder(
       });
     }
 
-    return tx.order.create({
+    const created = await tx.order.create({
       data: {
-        orderNumber,
+        orderNumber: placeholderNumber,
         userId,
         status: 'PENDING',
         paymentMethod: 'COD',
+        paymentStatus: 'PENDING',
         customerName: input.fullName,
         customerEmail: input.email || null,
         customerPhone: input.phone,
@@ -149,6 +152,12 @@ export async function createOrder(
           })),
         },
       },
+    });
+
+    // Human-readable sequential id from the DB-assigned autoincrement
+    return tx.order.update({
+      where: { id: created.id },
+      data: { orderNumber: `NVR-${String(created.seq).padStart(5, '0')}` },
     });
   });
 

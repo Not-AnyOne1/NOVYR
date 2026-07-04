@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE.name} — ${SITE.slogan}`,
     description: SITE.description,
-    creator: '@novyr',
+    creator: '@novyr_shop',
   },
   robots: {
     index: true,
