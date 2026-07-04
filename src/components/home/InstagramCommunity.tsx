@@ -28,7 +28,7 @@ export function InstagramStrip() {
           rel="noopener noreferrer"
           className="group inline-flex shrink-0 items-center gap-2.5 rounded-full border border-white/15 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:border-white/40"
         >
-          <Instagram size={16} /> @novyr_shop
+          <Instagram size={16} /> @novyr.shop
         </a>
       </div>
 
@@ -72,7 +72,7 @@ export function InstagramCommunity() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2.5 rounded-full border border-white/15 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:border-white/40"
           >
-            <Instagram size={16} /> @novyr_shop
+            <Instagram size={16} /> @novyr.shop
           </a>
         </div>
 
