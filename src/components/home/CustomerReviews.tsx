@@ -1,6 +1,7 @@
 import { BadgeCheck, Star } from 'lucide-react';
 import { StarRating } from '@/components/ui/StarRating';
 import { Reveal, RevealStagger, RevealItem } from '@/components/ui/Reveal';
+import { InstagramStrip } from '@/components/home/InstagramCommunity';
 
 type ReviewCard = {
   id: string;
@@ -27,7 +28,7 @@ export function CustomerReviews({
   const totalCount = stats && stats.count > 0 ? stats.count : reviews.length;
 
   return (
-    <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:py-32">
+    <section className="mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:py-28">
       <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         {/* Aggregate */}
         <Reveal>
@@ -78,6 +79,8 @@ export function CustomerReviews({
           ))}
         </RevealStagger>
       </div>
+
+      <InstagramStrip />
     </section>
   );
 }

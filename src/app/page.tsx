@@ -8,12 +8,11 @@ import {
 } from '@/lib/queries';
 import { WebsiteJsonLd } from '@/components/seo/JsonLd';
 import { Hero, type HeroProduct } from '@/components/home/Hero';
-import { FeaturedDrop } from '@/components/home/FeaturedDrop';
+import { ShopTheDrop } from '@/components/home/ShopTheDrop';
 import { ProductSection } from '@/components/home/ProductSection';
 import { WhyNovyr } from '@/components/home/WhyNovyr';
 import { LimitedDrop } from '@/components/home/LimitedDrop';
 import { CustomerReviews } from '@/components/home/CustomerReviews';
-import { InstagramCommunity } from '@/components/home/InstagramCommunity';
 import { NewsletterSection } from '@/components/home/NewsletterSection';
 
 export const revalidate = 300;
@@ -49,22 +48,15 @@ export default async function HomePage() {
       }
     : null;
 
-  // Featured Drop = a different spotlight piece
-  const featuredDrop = bestSellers.find((p) => p.id !== heroBase?.id) ?? bestSellers[0] ?? newArrivals[0] ?? null;
+  // Spotlight = a different piece from the hero, banner-highlighted atop the grid
+  const spotlight = bestSellers.find((p) => p.id !== heroBase?.id) ?? bestSellers[0] ?? newArrivals[0] ?? null;
+  const gridSellers = bestSellers.filter((p) => p.id !== spotlight?.id);
 
   return (
     <>
       <WebsiteJsonLd />
       <Hero product={heroProduct} />
-      <FeaturedDrop product={featuredDrop} />
-      <ProductSection
-        eyebrow="The Icons"
-        title="Best Sellers"
-        subtitle="The pieces the culture keeps coming back to."
-        href="/shop?filter=bestsellers"
-        products={bestSellers}
-        variant="poster"
-      />
+      <ShopTheDrop spotlight={spotlight} products={gridSellers} />
       <ProductSection
         eyebrow="Just Landed"
         title="New Collection"
@@ -76,7 +68,6 @@ export default async function HomePage() {
       <WhyNovyr />
       <LimitedDrop products={limited} />
       <CustomerReviews reviews={reviews} stats={reviewStats} />
-      <InstagramCommunity />
       <NewsletterSection />
     </>
   );

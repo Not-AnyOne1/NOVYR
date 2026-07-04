@@ -7,7 +7,7 @@ export function WhyNovyr() {
   return (
     <section className="relative overflow-hidden border-y border-charcoal-border bg-ink-900">
       <div className="pointer-events-none absolute inset-0 bg-grid [background-size:48px_48px] opacity-40" />
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <SectionHeading
           align="center"
           variant="poster"

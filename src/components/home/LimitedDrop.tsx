@@ -21,7 +21,7 @@ export function LimitedDrop({ products }: { products: ProductListItem[] }) {
       </span>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-radial-fade" />
 
-      <div className="relative mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:py-32">
+      <div className="relative mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:py-28">
         {/* Centerpiece countdown */}
         <div className="flex flex-col items-center text-center">
           <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-bone-dark">

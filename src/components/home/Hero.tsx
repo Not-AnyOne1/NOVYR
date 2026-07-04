@@ -33,7 +33,7 @@ export function Hero({ product }: { product: HeroProduct | null }) {
 
       <div className="relative mx-auto grid w-full max-w-[1500px] grid-cols-1 items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:py-0">
         {/* ── Editorial copy (≤ 40%) ── */}
-        <div className="order-2 lg:order-1 lg:col-span-5">
+        <div className="lg:order-1 lg:col-span-5">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export function Hero({ product }: { product: HeroProduct | null }) {
         </div>
 
         {/* ── Product showcase (the star) ── */}
-        <div className="order-1 lg:order-2 lg:col-span-7">
+        <div className="lg:order-2 lg:col-span-7">
           {main ? (
             <div className="mx-auto flex w-full max-w-[680px] items-start justify-center gap-3 sm:gap-4">
               {/* Main view */}

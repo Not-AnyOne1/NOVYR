@@ -9,7 +9,7 @@ const PERKS = [
 
 export function NewsletterSection() {
   return (
-    <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:py-32">
+    <section className="mx-auto max-w-[1500px] px-5 py-20 sm:px-8 lg:py-28">
       <div className="grain relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-ink-800 px-6 py-16 text-center sm:px-12 sm:py-20">
         <div className="pointer-events-none absolute inset-x-0 -top-20 h-64 bg-radial-fade" />
         <span className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none font-poster text-[24vw] uppercase leading-none text-white/[0.03]">
