@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Package, Heart, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Package, Heart, ArrowRight, ShoppingBag, LayoutDashboard } from 'lucide-react';
 
 import { auth } from '@/auth';
 import { prisma } from '@/lib/prisma';
@@ -10,6 +10,7 @@ import { StatusBadge } from '@/components/account/StatusBadge';
 export default async function AccountOverview() {
   const session = await auth();
   const userId = session!.user.id;
+  const isAdmin = session!.user.role === 'ADMIN';
 
   const [orders, wishlistCount] = await Promise.all([
     getUserOrders(userId),
@@ -28,6 +29,24 @@ export default async function AccountOverview() {
 
   return (
     <div className="space-y-8">
+      {isAdmin && (
+        <Link
+          href="/admin"
+          className="card group flex items-center justify-between gap-4 border-electric/30 bg-electric/5 p-5 transition-colors hover:border-electric/60"
+        >
+          <div className="flex items-center gap-4">
+            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-electric/15 text-electric-300">
+              <LayoutDashboard size={20} />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">Admin Dashboard</p>
+              <p className="text-xs text-smoke">Manage orders, products, and site content.</p>
+            </div>
+          </div>
+          <ArrowRight size={16} className="shrink-0 text-electric-300 transition-transform group-hover:translate-x-1" />
+        </Link>
+      )}
+
       <div className="grid gap-4 sm:grid-cols-3">
         {stats.map((s) => (
           <Link key={s.label} href={s.href} className="card group p-5 transition-colors hover:border-electric/40">

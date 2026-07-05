@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { signIn } from 'next-auth/react';
+import { signIn, getSession } from 'next-auth/react';
 import { Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
 import { GoogleButton } from '@/components/auth/GoogleButton';
@@ -13,7 +13,9 @@ export function LoginForm() {
   const searchParams = useSearchParams();
   // Only allow same-site relative paths (never an absolute/localhost/external URL)
   const rawCallback = searchParams.get('callbackUrl');
-  const callbackUrl = rawCallback && rawCallback.startsWith('/') && !rawCallback.startsWith('//') ? rawCallback : '/account';
+  const explicitCallback =
+    rawCallback && rawCallback.startsWith('/') && !rawCallback.startsWith('//') ? rawCallback : null;
+  const callbackUrl = explicitCallback ?? '/account';
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +31,14 @@ export function LoginForm() {
         toast.error('Invalid email or password');
       } else {
         toast.success('Welcome back');
-        router.push(callbackUrl);
+        // Respect an explicit destination (e.g. bounced from checkout). Otherwise,
+        // send admins straight to the dashboard instead of the customer account page.
+        let destination = explicitCallback;
+        if (!destination) {
+          const session = await getSession();
+          destination = session?.user?.role === 'ADMIN' ? '/admin' : '/account';
+        }
+        router.push(destination);
         router.refresh();
       }
     } finally {
