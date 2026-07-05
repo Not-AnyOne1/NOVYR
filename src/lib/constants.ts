@@ -19,7 +19,9 @@ export const SITE = {
     'NOVYR is a premium streetwear brand — heavyweight oversized t-shirts, graphic collections and limited drops. Free delivery anywhere in Morocco. Cash on delivery.',
   url: resolveSiteUrl(),
   email: 'novyr.shop@gmail.com',
-  phone: '+212 6 00 00 00 00',
+  phone: '+212 688 039 829',
+  // Dial-only format (no +, no spaces) for wa.me deep links.
+  whatsapp: '212688039829',
   currency: 'MAD',
   locale: 'en_MA',
   social: {

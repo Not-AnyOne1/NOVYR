@@ -11,6 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         position="bottom-right"
         theme="dark"
         richColors
+        offset={{ bottom: '96px', right: '16px' }}
         toastOptions={{
           style: {
             background: '#101014',

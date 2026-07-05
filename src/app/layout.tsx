@@ -13,6 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { ExitIntentPopup } from '@/components/cro/ExitIntentPopup';
 import { SocialProofToaster } from '@/components/cro/SocialProofToaster';
+import { WhatsAppButton } from '@/components/layout/WhatsAppButton';
 import { AnalyticsScripts } from '@/components/analytics/AnalyticsScripts';
 import { OrganizationJsonLd } from '@/components/seo/JsonLd';
 
@@ -101,6 +102,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <CartDrawer />
           <ExitIntentPopup />
           <SocialProofToaster />
+          <WhatsAppButton />
         </Providers>
         <Analytics />
         <SpeedInsights />
