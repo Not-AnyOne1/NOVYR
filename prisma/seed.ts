@@ -68,7 +68,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'Boxy oversized tee with a high-contrast portrait graphic and arched red "peace" script. 240 GSM heavyweight cotton, garment-washed for a vintage hand-feel. A numbered drop — strictly limited.',
     imageKey: 'peace',
-    priceCents: 34900,
+    priceCents: 21500,
     compareAtCents: 44900,
     collections: ['graphic', 'oversized', 'limited'],
     sizes: TEE_SIZES,
@@ -82,7 +82,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'Acid-washed black tee with a haunting motion-blur portrait and spider detail. Vintage hand-feel, boxy oversized fit, 240 GSM heavyweight cotton. Unsettling, unforgettable, unrepeatable.',
     imageKey: 'spider',
-    priceCents: 35900,
+    priceCents: 21500,
     compareAtCents: 45900,
     collections: ['graphic', 'oversized', 'limited'],
     sizes: TEE_SIZES,
@@ -96,7 +96,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'Blurred-figures graphic with reversed lyric type and a pink "Desire" wordmark. Oversized 240 GSM heavyweight cotton. Dreamlike, cinematic, made to be noticed.',
     imageKey: 'desire',
-    priceCents: 32900,
+    priceCents: 22500,
     collections: ['graphic', 'oversized'],
     sizes: TEE_SIZES,
     stock: [9, 15, 19, 17, 11, 5],
@@ -108,7 +108,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'Purple-toned portrait with a white cross and "the eyes of darkness" detailing. Oversized 240 GSM heavyweight cotton, premium soft-hand print. Emotion, printed.',
     imageKey: 'lonely',
-    priceCents: 31900,
+    priceCents: 21500,
     collections: ['graphic', 'oversized'],
     sizes: TEE_SIZES,
     stock: [9, 14, 18, 16, 10, 5],
@@ -120,7 +120,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'A haunting portrait graphic with red star accents and gothic "Dark" type. Oversized 240 GSM heavyweight cotton with a clean drop-shoulder drape. Statement-first, everyday-wearable.',
     imageKey: 'dark',
-    priceCents: 30900,
+    priceCents: 22500,
     collections: ['graphic', 'oversized'],
     sizes: TEE_SIZES,
     stock: [9, 15, 20, 18, 12, 5],
@@ -132,7 +132,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'Reaching-hands halftone graphic with a minimal "Breathe" wordmark. Printed on our 240 GSM oversized body with reinforced collar and side-seam construction. Quiet power.',
     imageKey: 'breathe',
-    priceCents: 29900,
+    priceCents: 19900,
     collections: ['graphic', 'oversized', 'essentials'],
     sizes: TEE_SIZES,
     stock: [11, 17, 21, 19, 12, 6],
@@ -144,7 +144,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       'White grain-print silhouette and fingerprint motif — "the dream started chasing me." Clean monochrome graphic on a 240 GSM oversized body. Understated, conceptual, premium.',
     imageKey: 'dream',
-    priceCents: 29900,
+    priceCents: 19900,
     collections: ['graphic', 'essentials'],
     sizes: TEE_SIZES,
     stock: [12, 18, 22, 20, 13, 6],
@@ -157,7 +157,7 @@ const PRODUCTS: SeedProduct[] = [
     description:
       '"To be a star you must suffer" — a high-contrast split portrait with a red star. 240 GSM heavyweight cotton, oversized fit. Raw, cinematic, unforgettable.',
     imageKey: 'suffer',
-    priceCents: 19900,
+    priceCents: 21500,
     compareAtCents: 27900,
     collections: ['graphic', 'oversized'],
     sizes: TEE_SIZES,
@@ -179,20 +179,20 @@ const PRODUCTS: SeedProduct[] = [
   },
   // ── drop 005 (July 2026) — auto-imported, design-derived names ──
   { name: 'Talk Too Much Tee', slug: 'talk-too-much-tee', description: 'Talk Too Much Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'talktoomuch', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Street Ways Tee', slug: 'street-ways-tee', description: 'Street Ways Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'streetways', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Street Ways Tee', slug: 'street-ways-tee', description: 'Street Ways Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'streetways', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
   { name: 'I Told ChatGPT Tee', slug: 'i-told-chatgpt-tee', description: 'I Told ChatGPT Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'toldchatgpt', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Born This Way Tee', slug: 'born-this-way-tee', description: 'Born This Way Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'bornthisway', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Born This Way Tee', slug: 'born-this-way-tee', description: 'Born This Way Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'bornthisway', priceCents: 22500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
   { name: 'Change 555 Tee', slug: 'change-555-tee', description: 'Change 555 Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'change555', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'They Not Like Us Tee', slug: 'they-not-like-us-tee', description: 'They Not Like Us Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'theynotlikeus', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Euphoria Tee', slug: 'euphoria-tee', description: 'Euphoria Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'euphoria', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'The Writhers Tee', slug: 'the-writhers-tee', description: 'The Writhers Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'writhers', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Dark Vision Tee', slug: 'dark-vision-tee-2', description: 'Dark Vision Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'darkvision2', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'They Not Like Us Tee', slug: 'they-not-like-us-tee', description: 'They Not Like Us Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'theynotlikeus', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Euphoria Tee', slug: 'euphoria-tee', description: 'Euphoria Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'euphoria', priceCents: 23900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'The Writhers Tee', slug: 'the-writhers-tee', description: 'The Writhers Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'writhers', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Dark Vision Tee', slug: 'dark-vision-tee-2', description: 'Dark Vision Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'darkvision2', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
   { name: 'Lavish Tee', slug: 'lavish-tee', description: 'Lavish Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'lavish', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Fein Oversized Tee', slug: 'fein-oversized-tee', description: 'Fein Oversized Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'fein', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Savages Tee', slug: 'savages-tee', description: 'Savages Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'savages', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Pretty Girls Love Brands Tee', slug: 'pretty-girls-love-brands-tee', description: 'Pretty Girls Love Brands Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'prettygirls', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Hellstar Records Tee', slug: 'hellstar-records-tee', description: 'Hellstar Records Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'hellstar', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
-  { name: 'Thug Tee', slug: 'thug-tee', description: 'Thug Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'thug', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Fein Oversized Tee', slug: 'fein-oversized-tee', description: 'Fein Oversized Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'fein', priceCents: 22500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Savages Tee', slug: 'savages-tee', description: 'Savages Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'savages', priceCents: 22500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Pretty Girls Love Brands Tee', slug: 'pretty-girls-love-brands-tee', description: 'Pretty Girls Love Brands Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'prettygirls', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Hellstar Records Tee', slug: 'hellstar-records-tee', description: 'Hellstar Records Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'hellstar', priceCents: 23900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'Thug Tee', slug: 'thug-tee', description: 'Thug Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'thug', priceCents: 21500, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
 ];
 
 const CATEGORIES = [
@@ -311,8 +311,9 @@ async function main() {
         name: p.name,
         slug: p.slug,
         description: p.description,
-        // Flat catalogue price — no fabricated discount (no permanent compare-at anchor)
-        priceCents: 19900,
+        // Tiered by perceived design value (199/215/225/239 DH) — no fabricated
+        // compare-at discount anchor.
+        priceCents: p.priceCents,
         compareAtCents: null,
         sku: baseSku,
         gsm: 240,
