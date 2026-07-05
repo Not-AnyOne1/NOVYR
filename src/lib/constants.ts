@@ -24,7 +24,7 @@ export const SITE = {
   locale: 'en_MA',
   social: {
     instagram: 'https://www.instagram.com/novyr_shopp',
-    tiktok: 'https://tiktok.com/@novyr',
+    tiktok: 'https://www.tiktok.com/@novyr_shop',
     twitter: 'https://twitter.com/novyr',
   },
 } as const;
