@@ -37,6 +37,7 @@ const NEW_PRODUCTS = [
   { key: 'prettygirls', name: 'Pretty Girls Love Brands Tee' },
   { key: 'hellstar', name: 'Hellstar Records Tee' },
   { key: 'thug', name: 'Thug Tee' },
+  { key: 'toocold', name: 'Too Cold For You Tee' },
 ];
 
 const slugify = (s) =>
@@ -67,11 +68,25 @@ async function main() {
   const usedSlugs = new Set(existing.map((p) => p.slug));
   let skuCounter = Math.max(1999, ...existing.map((p) => Number(p.sku?.match(/^NVR-(\d+)$/)?.[1] ?? 0))) + 1;
 
+  // Products already imported by image key (front image URL is /products/real/<key>.webp
+  // or /products/real/<key>.webp with no suffix) — used to make reruns a true no-op.
+  const existingByImage = new Set(
+    (await prisma.product.findMany({ select: { images: { take: 1, orderBy: { order: 'asc' }, select: { url: true } } } }))
+      .map((p) => p.images[0]?.url)
+      .filter(Boolean)
+  );
+
   let created = 0;
   for (const item of NEW_PRODUCTS) {
     const images = buildImages(item.key, item.name);
     if (!images.length) {
       console.warn(`⚠️  ${item.key}: no processed images on disk — skipped`);
+      continue;
+    }
+
+    // Idempotent: this exact image key is already a product → skip (don't duplicate).
+    if (existingByImage.has(images[0].url)) {
+      console.log(`↷ ${item.name} (${item.key}) already imported — skipped`);
       continue;
     }
 
