@@ -38,6 +38,7 @@ const NEW_PRODUCTS = [
   { key: 'hellstar', name: 'Hellstar Records Tee' },
   { key: 'thug', name: 'Thug Tee' },
   { key: 'toocold', name: 'Too Cold For You Tee' },
+  { key: 'sideprofile', name: 'Side Profile Tee' },
 ];
 
 const slugify = (s) =>

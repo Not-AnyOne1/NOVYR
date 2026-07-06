@@ -72,4 +72,5 @@ export const ITEMS = [
   { key: 'thug', file: 'photo_2026-07-04_03-03-31.jpg', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   // ── drop 006 (July 2026) ──
   { key: 'toocold', file: 'ChatGPT Image 6 juil. 2026, 15_22_27.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'sideprofile', file: 'ChatGPT Image 6 juil. 2026, 15_21_01.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
 ];
