@@ -75,5 +75,5 @@ export const ITEMS = [
   { key: 'sideprofile', file: 'ChatGPT Image 6 juil. 2026, 15_21_01.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   // ── drop 007 (July 2026) ──
   // front/back 2-up layout → isolate the front garment (+ real back view)
-  { key: 'iwasblind', file: 'ChatGPT Image 9 juil. 2026, 15_49_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12, region: { l: 0.0, t: 0.05, w: 0.50, h: 0.40 }, back: { l: 0.34, t: 0.39, w: 0.66, h: 0.58 } },
+  { key: 'iwasblind', file: 'ChatGPT Image 9 juil. 2026, 15_49_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12, region: { l: 0.0, t: 0.0, w: 0.55, h: 0.50 }, back: { l: 0.32, t: 0.36, w: 0.68, h: 0.62 } },
 ];
