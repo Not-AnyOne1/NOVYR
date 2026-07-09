@@ -39,6 +39,7 @@ const NEW_PRODUCTS = [
   { key: 'thug', name: 'Thug Tee' },
   { key: 'toocold', name: 'Too Cold For You Tee' },
   { key: 'sideprofile', name: 'Side Profile Tee' },
+  { key: 'iwasblind', name: 'I Was Blind Tee' },
 ];
 
 const slugify = (s) =>

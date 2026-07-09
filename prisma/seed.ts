@@ -196,6 +196,7 @@ const PRODUCTS: SeedProduct[] = [
   // ── drop 006 (July 2026) ──
   { name: 'Too Cold For You Tee', slug: 'too-cold-for-you-tee', description: 'Too Cold For You Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'toocold', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
   { name: 'Side Profile Tee', slug: 'side-profile-tee', description: 'Side Profile Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'sideprofile', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
+  { name: 'I Was Blind Tee', slug: 'i-was-blind-tee', description: 'I Was Blind Tee — oversized graphic tee in 240 GSM heavyweight combed cotton with a high-density, no-crack print. Boxy street silhouette, garment-washed for a broken-in feel. Free delivery anywhere in Morocco, cash on delivery.', imageKey: 'iwasblind', priceCents: 19900, collections: ['graphic', 'oversized'], sizes: TEE_SIZES, stock: [8, 14, 18, 16, 10, 4], flags: { isNewArrival: true } },
 ];
 
 const CATEGORIES = [
