@@ -74,6 +74,6 @@ export const ITEMS = [
   { key: 'toocold', file: 'ChatGPT Image 6 juil. 2026, 15_22_27.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   { key: 'sideprofile', file: 'ChatGPT Image 6 juil. 2026, 15_21_01.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
   // ── drop 007 (July 2026) ──
-  // front/back 2-up layout → isolate the front garment (+ real back view)
-  { key: 'iwasblind', file: 'ChatGPT Image 9 juil. 2026, 15_49_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12, region: { l: 0.0, t: 0.0, w: 0.55, h: 0.50 }, back: { l: 0.32, t: 0.36, w: 0.68, h: 0.62 } },
+  // posted exactly as the source photo (front+back shown together), same as prettygirls
+  { key: 'iwasblind', file: 'ChatGPT Image 9 juil. 2026, 15_49_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
 ];
