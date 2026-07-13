@@ -10,6 +10,7 @@ export function ProductSection({
   products,
   priorityCount = 0,
   variant = 'default',
+  limit = 8,
 }: {
   eyebrow?: string;
   title: string;
@@ -18,12 +19,14 @@ export function ProductSection({
   products: ProductListItem[];
   priorityCount?: number;
   variant?: 'default' | 'poster';
+  /** Cap on how many products to show — pass products.length to show all. Defaults to 8. */
+  limit?: number;
 }) {
   if (!products.length) return null;
   return (
     <section className="mx-auto max-w-[1500px] px-5 py-24 sm:px-8 lg:py-32">
       <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} href={href} variant={variant} />
-      <ProductGrid products={products.slice(0, 8)} className="mt-12 lg:mt-16" priorityCount={priorityCount} />
+      <ProductGrid products={products.slice(0, limit)} className="mt-12 lg:mt-16" priorityCount={priorityCount} />
     </section>
   );
 }
