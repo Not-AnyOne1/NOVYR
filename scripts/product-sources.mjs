@@ -76,4 +76,10 @@ export const ITEMS = [
   // ── drop 007 (July 2026) ──
   // posted exactly as the source photo (front+back shown together), same as prettygirls
   { key: 'iwasblind', file: 'ChatGPT Image 9 juil. 2026, 15_49_46.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  // ── drop 008 (July 2026) — posted exactly as the source photo (no region extraction) ──
+  { key: 'makelove', file: '5.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'hardway', file: 'Design sans titre (4).png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'toogucci', file: 'Design sans titre (5).png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'inspiredfear', file: 'Gemini_Generated_Image_mcg9lbmcg9lbmcg9.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
+  { key: 'redlips', file: 'Gemini_Generated_Image_z0yckiz0yckiz0yc.png', gravity: 'centre', zoom: 1, printTop: 0.5, detailTop: 0.12 },
 ];

@@ -40,6 +40,11 @@ const NEW_PRODUCTS = [
   { key: 'toocold', name: 'Too Cold For You Tee' },
   { key: 'sideprofile', name: 'Side Profile Tee' },
   { key: 'iwasblind', name: 'I Was Blind Tee' },
+  { key: 'makelove', name: 'Make Love Make Art Tee' },
+  { key: 'hardway', name: 'The Hard Way Tee' },
+  { key: 'toogucci', name: 'Too Gucci Tee' },
+  { key: 'inspiredfear', name: 'Inspired By Fear Tee' },
+  { key: 'redlips', name: 'Red Lips Tee' },
 ];
 
 const slugify = (s) =>
